@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+@layer components {
+    .nav-bar {
+        @apply flex justify-between w-full fixed top-0 z-10 h-28 px-10 items-center;
+    }
+
+    .nav-items {
+        @apply text-2xl font-semibold text-slate-50 py-2 px-5 rounded-[1.2rem] bg-transparent duration-500 hover:bg-slate-350 hover:bg-opacity-40;
+    }
+
+    .food-section {
+        @apply w-full h-screen;
+    }
+
+    .food-img {
+        @apply w-full h-full object-cover;
+    }
+
+    .food-details {
+        @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[50%] text-center;
+    }
+}
