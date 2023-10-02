@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Power Thailand</title>
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Tesla_T_symbol.svg/1200px-Tesla_T_symbol.svg.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <div id="sideNav" class="side-nav">
+        <div class="flex justify-end">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="close-icon" id="closeIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+            </svg>
+        </div>
+        <div class="flex flex-col mt-[10rem]">
+            <a href="#tomyumgoong" class="nav-items">ต้มยำกุ้ง</a>
+            <a href="#padthai" class="nav-items">ผัดไทย</a>
+            <a href="#padkrapow" class="nav-items">ผัดกระเพรา</a>
+            <a href="#somtum" class="nav-items">ส้มตำ</a>
+            <a href="#khaopad" class="nav-items">ข้าวผัด</a>
+            <a href="#mangostickyrice" class="nav-items">ข้าวเหนียวมะม่วง</a>
+        </div>
+    </div>
+    <main id="mainDiv" class="snap-feature">
+        <!-- header -->
+        <header class="relative">
+            <!-- nav -->
+            <nav class="nav-bar">
+                <!-- logo -->
+                <div class="logo mr-[9.5rem] cursos-pointer">
+                    <svg class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon h-6" viewBox=""
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="" fill=""></path>
+                    </svg>
+                    </a>
+                </div>
+
+                <!-- nav items -->
+                <div class="hidden lg:block">
+                    <a href="#tomyumgoong" class="nav-items">ต้มยำกุ้ง</a>
+                    <a href="#padthai" class="nav-items">ผัดไทย</a>
+                    <a href="#padkrapow" class="nav-items">ผัดกระเพรา</a>
+                    <a href="#somtum" class="nav-items">ส้มตำ</a>
+                    <a href="#khaopad" class="nav-items">ข้าวผัด</a>
+                    <a href="#mangostickyrice" class="nav-items">ข้าวเหนียวมะม่วง</a>
+                </div>
+
+                <!-- external links -->
+                <div class="links">
+                    <a href="#fashion" class="nav-items hidden lg:inline">แฟชั่น</a>
+                    <a href="#fight" class="nav-items hidden lg:inlines">มวยไทย</a>
+                    <a href="#festival" class="nav-items hidden lg:inline">เทศกาลไทย</a>
+                    <a href="#" class="nav-items" id="menu">เมนู</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- section tom yum goong -->
+        <section id="tomyumgoong" class="car-section">
+            <img class="food-img"
+                src="./images/tom-yum-kung-bowl-with-tomato-chili-lemongrass-garlic-lemon-kaffir-lime-leaves.jpg"
+                alt="tomyum goong" />
+            <div class="food-details">
+                <h2 class="food-name">Model Y</h2>
+                <p class="food-tagline">
+                    Order Online for <span class="underline"> Touchless Delivery </span>
+                </p>
+            </div>
+            <div class="car-buttons">
+                <a href="#" class="btn">Custom Order</a>
+                <a href="#" class="btn inventory">Existing Inventory</a>
+            </div>
+
+            <div class="down-arrow">
+                <a href="#modelX">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-12 h-12 animate-bounce">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // open side menu
+        document.getElementById("menu").addEventListener("click", () => {
+            document.getElementById("sideNav").classList.remove("right-[-50%]");
+            document.getElementById("sideNav").classList.add("right-0");
+            document.getElementById("mainDiv").classList.add("blur-sm");
+        });
+
+        // close side menu
+        document.getElementById("closeIcon").addEventListener("click", () => {
+            document.getElementById("sideNav").classList.add("right-[-50%]");
+            document.getElementById("sideNav").classList.remove("right-0");
+            document.getElementById("mainDiv").classList.remove("blur-sm");
+        });
+    </script>
+
+</body>
+
+</html>
