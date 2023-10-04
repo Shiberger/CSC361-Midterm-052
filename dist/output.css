@@ -659,6 +659,13 @@ video {
   object-fit: cover;
 }
 
+.food-vdo{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .food-details{
   position: absolute;
   top: 20%;
@@ -858,4 +865,12 @@ html {
   .lg\:inline{
     display: inline;
   }
+
+  .card{
+    @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+
+.badge{
+    @apply bg-secondary-100 text-secondary-200 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2;
+}
 }
