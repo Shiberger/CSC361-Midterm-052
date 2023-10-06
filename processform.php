@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         echo "<p>Registration successful:</p>";
         echo "<p>Username: $username</p>";
-        echo "Date of Birth: $dateOfBirth";
+        echo "<p>Date of Birth: $dateOfBirth</p>";
         echo "<p>Mobile Phone: $mobile</p>";
     }
 } else {
