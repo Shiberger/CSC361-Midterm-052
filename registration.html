@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/basil-minced-pork-with-rice-fried-egg.jpg" type="#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body>
+    <div id="sideNav" class="side-nav">
+        <div class="flex justify-end">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="close-icon" id="closeIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <div class="flex flex-col mt-[10rem]">
+            <a href="./index.html" class="nav-items">หน้าหลัก</a>
+            <a href="./tomyumgoong.html" class="nav-items">ต้มยำกุ้ง</a>
+            <a href="#padthai" class="nav-items">ผัดไทย</a>
+            <a href="#somtum" class="nav-items">ส้มตำ</a>
+            <a href="#padkraprow" class="nav-items">ข้าวผัดกระเพรา</a>
+            <a href="#khaopad" class="nav-items">ข้าวผัด</a>
+            <a href="#stickyrice" class="nav-items">ข้าวเหนียวมะม่วง</a>
+        </div>
+    </div>
+
+
+    <main id="mainDiv" class="snap-feature">
+        <!-- header  -->
+        <header class="relative">
+            <!-- navigation -->
+            <nav class="nav-bar">
+                <!-- logo  -->
+                <div class="logo mr-[9.5rem] cursor-pointer">
+                    <a href="./index.html" class="nav-items">หน้าหลัก</a>
+                </div>
+                
+                <!-- external links  -->
+                <div class="links">
+                    <a href="#" class="nav-items" id="menu">เมนู</a>
+                </div>
+            </nav>
+        </header>
+
+        <section id="registration" class="register-section">
+            <div class="register-details">
+                <h2 class="food-name">สมัครสมาชิก</h2>
+                <form action="processform.php" method="POST">
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700">Username (E-mail)</label>
+                    <input type="email" id="username" name="username" class="form-input mt-1 block w-full" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" class="form-input mt-1 block w-full" required minlength="8">
+                </div>
+                <div class="mb-4">
+                    <label for="repassword" class="block text-gray-700">Re-Password</label>
+                    <input type="password" id="repassword" name="repassword" class="form-input mt-1 block w-full" required minlength="8">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Birthday</label>
+                    <select name="day" class="form-select mt-1 w-1/4 inline-block mr-2" required>
+                        <?php for ($i = 1; $i <= 31; $i++) { ?>
+                            <option value="<?= $i ?>"><?= $i ?></option>
+                        <?php } ?>
+                    </select>
+                    <select name="month" class="form-select mt-1 w-1/4 inline-block mr-2" required>
+                        <?php for ($i = 1; $i <= 12; $i++) { ?>
+                            <option value="<?= $i ?>"><?= $i ?></option>
+                        <?php } ?>
+                    </select>
+                    <select name="year" class="form-select mt-1 w-1/4 inline-block" required>
+                        <?php for ($i = date("Y"); $i >= 1900; $i--) { ?>
+                            <option value="<?= $i ?>"><?= $i ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="mobile" class="block text-gray-700">Mobile Phone (+66)</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="^\+66\d{9}$" class="form-input mt-1 block w-full" required>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // open side menu
+        document.getElementById("menu").addEventListener("click", () => {
+            document.getElementById("sideNav").classList.remove("right-[-50%]");
+            document.getElementById("sideNav").classList.add("right-0");
+            document.getElementById("mainDiv").classList.add("blur-sm");
+        });
+
+        // close side menu
+        document.getElementById("closeIcon").addEventListener("click", () => {
+            document.getElementById("sideNav").classList.add("right-[-50%]");
+            document.getElementById("sideNav").classList.remove("right-0");
+            document.getElementById("mainDiv").classList.remove("blur-sm");
+        });
+    </script>
+    
+</body>
+</html>
