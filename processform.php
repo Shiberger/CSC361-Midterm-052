@@ -4,9 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $repassword = $_POST["repassword"];
-    $day = $_POST["day"];
-    $month = $_POST["month"];
-    $year = $_POST["year"];
+    $dateOfBirth = $_POST["birthday"];
     $mobile = $_POST["mobile"];
 
     // Perform form validation
@@ -32,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         echo "<p>Registration successful:</p>";
         echo "<p>Username: $username</p>";
-        echo "<p>Birthday: $day/$month/$year</p>";
+        echo "Date of Birth: $dateOfBirth";
         echo "<p>Mobile Phone: $mobile</p>";
     }
 } else {

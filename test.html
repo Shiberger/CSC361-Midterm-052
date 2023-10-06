@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Test Page</title>
+</head>
+
+<body>
+    <label for="day">Day:</label>
+    <select id="day" name="day">
+        <?php for ($i = 1; $i <= 31; $i++) { ?>
+        <option value="<?= $i ?>">
+            <?= $i ?>
+        </option>
+        <?php } ?>
+    </select>
+
+    <label for="month">Month:</label>
+    <select id="month" name="month">
+        <?php for ($i = 1; $i <= 12; $i++) { ?>
+        <option value="<?= $i ?>">
+            <?= $i ?>
+        </option>
+        <?php } ?>
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year" name="year">
+        <?php for ($i = date("Y"); $i >= 1900; $i--) { ?>
+        <option value="<?= $i ?>">
+            <?= $i ?>
+        </option>
+        <?php } ?>
+    </select>
+
+    <!-- Your content will go here -->
+</body>
+
+</html>
